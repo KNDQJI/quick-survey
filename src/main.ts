@@ -18,11 +18,13 @@ if (title.includes('SZTE') || title.includes('OMHV')) {
     }
 }
 console.log({ started });
+const $$ = (selector: string) => Array.from(document.querySelectorAll<HTMLElement>(selector));
+
+
 if (started && started.started) {
     check(null, started.type);
 }
 
-const $$ = (selector: string) => Array.from(document.querySelectorAll<HTMLElement>(selector));
 
 function check(e: MouseEvent | null, type: number) {
     if (e) {
